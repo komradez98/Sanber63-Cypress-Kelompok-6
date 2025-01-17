@@ -10,12 +10,12 @@ describe('Shopping Cart', () => {
     cy.get('.item-options > :nth-child(2)').should('contain', 'L')
     cy.get('.item-options > :nth-child(4)').should('contain', 'Green')
   })
-  it('Update Cart - negative test 0 qyt', () => {
+  it('Update Cart - negative test 0 qty', () => {
     cy.autoLoginOca()
     cy.negTest1()
     cy.get('#qty-error').should('contain', 'Please enter a quantity greater than 0.')
   })
-  it('Update Cart - negative test over 10k qyt', () => {
+  it('Update Cart - negative test over 10k qty', () => {
     cy.autoLoginOca()
     cy.negTest2()
     cy.get('#qty-error').should('contain', 'The maximum you may purchase is 10000.')

@@ -1,3 +1,5 @@
+import magentoPage from "./pageObject/magentoPage"
+
 // Function Oca Yordant Start
 Cypress.Commands.add('loginOca', (username, password) => {
     cy.visit('https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS9jdXN0b21lci9hY2NvdW50L2xvZ291dFN1Y2Nlc3Mv/')
@@ -18,7 +20,7 @@ Cypress.Commands.add('chooseProduct1', () => {
     cy.url().should('include', '/hero-hoodie.html')
     cy.get('#option-label-size-143-item-170').click()
     cy.get('#option-label-color-93-item-52').click()
-    cy.get('#product-addtocart-button').click()
+    cy.get(magentoPage.addToCartBtn).click()
     })
 Cypress.Commands.add('removeCart', () => {
     cy.visit('https://magento.softwaretestingboard.com/checkout/cart/')
@@ -29,7 +31,7 @@ Cypress.Commands.add('updateCart', () => {
     cy.get('.action-edit').click()
     cy.get('#option-label-size-143-item-169').click()
     cy.get('#option-label-color-93-item-53').click()
-    cy.get('#product-updatecart-button').click()
+    cy.get(magentoPage.updateCartBtn).click()
 })
 Cypress.Commands.add('negTest1', () => {
   cy.visit('https://magento.softwaretestingboard.com/checkout/cart/')
@@ -37,7 +39,7 @@ Cypress.Commands.add('negTest1', () => {
     cy.get('#option-label-size-143-item-170').click()
     cy.get('#option-label-color-93-item-52').click()
     cy.get('#qty').clear().type('0')
-    cy.get('#product-updatecart-button').click()
+    cy.get(magentoPage.updateCartBtn).click()
   })
   Cypress.Commands.add('negTest2', () => {
     cy.visit('https://magento.softwaretestingboard.com/checkout/cart/')
@@ -45,6 +47,6 @@ Cypress.Commands.add('negTest1', () => {
     cy.get('#option-label-size-143-item-170').click()
     cy.get('#option-label-color-93-item-52').click()
     cy.get('#qty').clear().type('10001')
-    cy.get('#product-updatecart-button').click()
+    cy.get(magentoPage.updateCartBtn).click()
     })
 // Oca end
