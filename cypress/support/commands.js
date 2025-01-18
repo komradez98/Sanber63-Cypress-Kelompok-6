@@ -8,10 +8,10 @@ Cypress.Commands.add('loginOca', (username, password) => {
     cy.get('.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .password > .control > #pass').type(password)
     cy.get('.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .actions-toolbar > div.primary > #send2 > span').click()
   })
-Cypress.Commands.add('autoLoginOca', () => {
+Cypress.Commands.add('autoLoginOca', (uNum) => {
     cy.visit('https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS9jdXN0b21lci9hY2NvdW50L2xvZ291dFN1Y2Nlc3Mv/')
     cy.fixture('users.json').then((users) => {
-      const datauser = users[0];
+      const datauser = users[uNum];
     cy.loginOca(datauser.username, datauser.password)
     });   
   })
