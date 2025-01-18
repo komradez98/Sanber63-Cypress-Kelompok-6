@@ -101,5 +101,39 @@ Cypress.Commands.add('shippingField', () => {
 })
 // Dede End
 
+//Fajri Annisa
+Cypress.Commands.add('fillCreateAccount', (firstname, lastname, email, password) => {
+  cy.visit('https://magento.softwaretestingboard.com/customer/account/create/')
+  cy.get('#firstname').type(firstname)
+  cy.get('#lastname').type(lastname)
+  cy.get('#email_address').type(email)
+  cy.get('#password').type(password)
+  cy.get('#password-confirmation ').type(password)
+
+})
+Cypress.Commands.add('autoFillCreateAccount', () => {
+  cy.visit('https://magento.softwaretestingboard.com/customer/account/create/')
+  cy.fixture('users.json').then ((users) => {
+    const datauser = users[10];
+    cy.fillCreateAccount(datauser.firstname, datauser.lastname, datauser.email, datauser.password)
+  })
+})
+Cypress.Commands.add('autoFillCreateAccount', () => {
+  cy.visit('https://magento.softwaretestingboard.com/customer/account/create/')
+  cy.fixture('users.json').then ((users) => {
+    const datauser = users[11];
+    cy.fillCreateAccount(datauser.firstname, datauser.lastname, datauser.email, datauser.password)
+  })
+})
+Cypress.Commands.add('autoFillCreateAccount', () => {
+  cy.visit('https://magento.softwaretestingboard.com/customer/account/create/')
+  cy.fixture('users.json').then ((users) => {
+    const datauser = users[12];
+    cy.fillCreateAccount(datauser.firstname, datauser.lastname, datauser.email, datauser.password)
+  })
+})
+//Annisa End
+
+
 
 

@@ -228,5 +228,25 @@
       "catchPhrase": "Centralized empowering task-force",
       "bs": "target end-to-end models"
     }
-  }
+  },
+  {
+    "firstname" :"Sanbercode",
+    "lastname"  :"kel6",
+    "email"  :"sanberkel6@gmail.com",
+    "password" :"Sanbercode6"
+  },
+  {
+    "firstname" :"Code",
+    "lastname"  :"kel6",
+    "email"  :"codekel6@gmail.com",
+    "password" :"sanbercode6"
+  },
+  {
+    "firstname" :"sanber",
+    "lastname"  :"kode",
+    "email"  :"sanber6@gmail.com",
+    "password" :"Sanbercode"
+  },
+  
+
 ]
