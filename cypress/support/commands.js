@@ -132,6 +132,21 @@ Cypress.Commands.add('autoFillCreateAccount', () => {
     cy.fillCreateAccount(datauser.firstname, datauser.lastname, datauser.email, datauser.password)
   })
 })
+Cypress.Commands.add('autoFillCreateAccount', () => {
+  cy.visit('https://magento.softwaretestingboard.com/customer/account/create/')
+  cy.fixture('users.json').then ((users) => {
+    const datauser = users[13];
+    cy.fillCreateAccount(datauser.firstname, datauser.lastname, datauser.email, datauser, password)
+  })
+})
+Cypress.Commands.add('autoFillCreateAccount', () => {
+  cy.visit('https://magento.softwaretestingboard.com/customer/account/create/')
+  cy.fixture('users.json').then ((users) => {
+    const datauser = users[14];
+    cy.fillCreateAccount(datauser.firstname, datauser.lastname, datauser.email, datauser.password)
+  })
+})
+
 //Annisa End
 
 

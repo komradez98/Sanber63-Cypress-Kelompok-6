@@ -230,23 +230,37 @@
     }
   },
   {
-    "firstname" :"Sanbercode",
+    "firstname" :"Cypress",
     "lastname"  :"kel6",
-    "email"  :"sanberkel6@gmail.com",
-    "password" :"Sanbercode6"
+    "email"  :"cypresskel6@gmail.com",
+    "password" :"Sanberkel6"
   },
   {
     "firstname" :"Code",
     "lastname"  :"kel6",
-    "email"  :"codekel6@gmail.com",
-    "password" :"sanbercode6"
+    "email"  :"codesanber6@gmail.com",
+    "password" : "sanbercypress"
   },
   {
     "firstname" :"sanber",
     "lastname"  :"kode",
-    "email"  :"sanber6@gmail.com",
+    "email"  :"codesanber6@gmail.com",
     "password" :"Sanbercode"
+  },
+  {
+      "firstname" :"sanber",
+      "lastname"  :"kode",
+      "email"  :"codesanber6@gmail.com",
+      "password" :"Sanber6"
+  },
+  {
+    "firstname" :"sanber",
+      "lastname"  :"kode",
+      "email"  :"codesanber6@gmail.com",
+      "password" :"Sanber6"
   }
+
+  
 
 
 ]
