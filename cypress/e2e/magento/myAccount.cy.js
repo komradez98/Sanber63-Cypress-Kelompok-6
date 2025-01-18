@@ -1,5 +1,5 @@
 describe('edit account information', () => {
-    it('edit succes', () => {
+    it('edit success', () => {
         cy.loginDulu()
         cy.editAccountInfo('Sanber', 'Code')
         cy.get('.message-success').should('contain', 'You saved the account information.')
@@ -19,10 +19,47 @@ describe('edit account information', () => {
 
 })
 
-//   describe('edit address', () => {
-//     it('successfully edit address', () => {
-//     })
+  describe('edit address', () => {
+    it('edit address success', () => {
+        cy.loginDulu()
+        cy.editAddress({
+            company: 'Sanbercode',
+            phone: '123456789',
+            street: '21 Bedok st',
+            city: 'Melbourne',
+            region: 'Alaska',
+            zip: '6789',
+            country: 'United States'
+          });
+        cy.get('.message-success').should('contain', 'You saved the address.')
+    })
     
-//     it('failed edit information', () => {
-//     })
-//   })
+    it('edit address failed - street empty', () => {
+        cy.loginDulu()
+        cy.editAddress({
+            company: 'Sanbercode',
+            phone: '123456789',
+            street: ' ',
+            city: 'Melbourne',
+            region: 'Alaska',
+            zip: '6789',
+            country: 'United States'
+          });
+        cy.get('#street_1-error').should('contain', 'This is a required field.')
+    })
+
+    it('edit address failed - region empty', () => {
+        cy.loginDulu()
+        cy.editAddress({
+            company: 'Sanbercode',
+            phone: '123456789',
+            street: '21 bedok st',
+            city: 'Melbourne',
+            region: '',
+            zip: '6789',
+            country: 'United States'
+          });
+        cy.get('#region_id-error').should('contain', 'Please select an option.')
+    })
+
+  })
