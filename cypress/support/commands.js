@@ -150,5 +150,21 @@ Cypress.Commands.add('autoFillCreateAccount', () => {
 //Annisa End
 
 
+// Naqiya Start
+Cypress.Commands.add('loginDulu', () => {
+  cy.visit('https://magento.softwaretestingboard.com/customer/account/login/')
+  cy.get('#email').type('email.percobaan@gmail.com')
+  cy.get('.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .password > .control > #pass').type('Percobaan123')
+  cy.get('.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .actions-toolbar > div.primary > #send2').click()
+})
 
+Cypress.Commands.add('editAccountInfo', (firstname, lastname) => {
+  cy.get('.block-dashboard-info > .block-content > .box > .box-actions > .edit > span').click()
+  cy.get('#firstname').clear().type(firstname)
+  cy.get('#lastname').clear().type(lastname)
+  cy.get('#form-validate > .actions-toolbar > div.primary > .action').click()
+})
+
+
+// Naqiya End
 

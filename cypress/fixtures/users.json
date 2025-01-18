@@ -248,7 +248,6 @@
     "password" :"Sanbercode"
   },
   {
-<<<<<<< HEAD
       "firstname" :"sanber",
       "lastname"  :"kode",
       "email"  :"codesanber6@gmail.com",
@@ -259,15 +258,10 @@
       "lastname"  :"kode",
       "email"  :"codesanber6@gmail.com",
       "password" :"Sanber6"
-  }
-
-  
-
-
-=======
+  },
+  {
     "id" : 14,
     "username" : "email.percobaan@gmail.com",
     "password" : "Percobaan123"
   }
->>>>>>> 09e162c81270e1316c20948ec8879e099b97a4c3
 ]
