@@ -246,7 +246,10 @@
     "lastname"  :"kode",
     "email"  :"sanber6@gmail.com",
     "password" :"Sanbercode"
+  },
+  {
+    "id" : 14,
+    "username" : "email.percobaan@gmail.com",
+    "password" : "Percobaan123"
   }
-
-
 ]
