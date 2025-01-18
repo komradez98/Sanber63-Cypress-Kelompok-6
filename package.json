@@ -1,6 +1,7 @@
 {
   "devDependencies": {
-    "cypress": "^14.0.0"
+    "cypress": "^14.0.0",
+    "cypress-xpath": "^2.0.1"
   },
   "name": "sanber63-cypress-kelompok-6",
   "version": "1.0.0",

@@ -1,4 +1,5 @@
 import magentoPage from "./pageObject/magentoPage"
+import 'cypress-xpath'; //untuk menginport xpath
 
 // Function Oca Yordant Start
 Cypress.Commands.add('loginOca', (username, password) => {
@@ -50,3 +51,55 @@ Cypress.Commands.add('negTest1', () => {
     cy.get(magentoPage.updateCartBtn).click()
     })
 // Oca end
+
+// Dede
+// npm install -D cypress-xpath (untuk menggunakan xpath)
+Cypress.Commands.add('addToCartAndCheckout', () => {
+  cy.visit('https://magento.softwaretestingboard.com')
+  cy.xpath("//img[@alt='Radiant Tee']").click()
+  cy.xpath("//div[@id='option-label-size-143-item-166']").click()
+  cy.xpath("//div[@class='swatch-attribute color']/div[@class='swatch-attribute-options clearfix']/div[1]").click()
+  cy.xpath("//span[.='Add to Cart']").click()
+  cy.wait(2000)
+  cy.xpath("//div[@class='minicart-wrapper']/a[@href='https://magento.softwaretestingboard.com/checkout/cart/']")
+    .should('be.visible')
+    .click({force: true})
+  cy.xpath("//button[@id='top-cart-btn-checkout']").click()
+  cy.wait(5000)
+})
+
+Cypress.Commands.add('shippingField', () => {
+  cy.addToCartAndCheckout()
+      cy.xpath("//div[@class='field required']//input[@id='customer-email']")
+        .type('sanberkel6@gmail.com')
+        .click()
+      cy.wait(2000)
+      cy.xpath("//input[@id='customer-password']")
+        .type('sanberkel6')
+    cy.xpath("//span[.='Login']").click()  
+      cy.xpath("//input[@name='firstname']")
+        .type('Jhon')
+      cy.xpath("//input[@name='lastname']")
+        .type('Doe')
+      cy.xpath("//input[@name='company']")
+        .type('Sony Entertainment')
+      cy.xpath("//fieldset[@class='field street admin__control-fields required']//div[@class='field _required']//input[@class='input-text']")
+        .type('New York')
+      cy.xpath("//input[@name='city']")
+        .type('Bronx')
+      cy.xpath("//select[@name='region_id']")
+        .should('be.visible')
+        .select('1')
+      cy.xpath("//input[@name='postcode']")
+        .type('12345-6789')
+      cy.xpath("//select[@name='country_id']/option[text()='United States']").should('be.visible')
+      cy.xpath("//input[@name='telephone']")
+       .type('081234567891')
+      cy.xpath("//td[@id='label_method_flatrate_flatrate']").click()
+      cy.xpath("//span[.='Next']").click()
+  cy.wait(5000)
+})
+// Dede End
+
+
+
