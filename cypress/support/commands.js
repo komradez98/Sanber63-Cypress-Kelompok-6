@@ -146,7 +146,6 @@ Cypress.Commands.add('autoFillCreateAccount', () => {
     cy.fillCreateAccount(datauser.firstname, datauser.lastname, datauser.email, datauser.password)
   })
 })
-
 //Annisa End
 
 

@@ -24,6 +24,8 @@ describe('create an account negative', () => {
   })
   it('Failed to create account - password less than 8 characters', () => {
     cy.autoFillCreateAccount()
+    cy.get('#password').clear().type('Sanber6');
+    cy.get('#password-confirmation').clear().type('Sanber6');
     //cy.get('#form-validate > .actions-toolbar > div.primary > .action > span').click()
     //cy.get('#password-error')
   })
