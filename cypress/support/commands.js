@@ -149,7 +149,6 @@ Cypress.Commands.add('fillCreateAccount', (firstname, lastname, email, password)
   cy.get('#email_address').type(email)
   cy.get('#password').type(password)
   cy.get('#password-confirmation ').type(password)
-
 })
 Cypress.Commands.add('autoFillCreateAccount', () => {
   cy.visit('https://magento.softwaretestingboard.com/customer/account/create/')
@@ -158,11 +157,15 @@ Cypress.Commands.add('autoFillCreateAccount', () => {
     cy.fillCreateAccount(datauser.firstname, datauser.lastname, datauser.email, datauser.password)
   })
 })
-Cypress.Commands.add('autoFillCreateAccount', () => {
-  cy.visit('https://magento.softwaretestingboard.com/customer/account/create/')
-  cy.fixture('users.json').then ((users) => {
-    const datauser = users[11];
-    cy.fillCreateAccount(datauser.firstname, datauser.lastname, datauser.email, datauser.password)
+Cypress.Commands.add('failedCreateAccount1', () => {
+  cy.visit('https://magento.softwaretestingboard.com/customer/account/create/');
+  cy.fixture('users.json').then((users) => {
+    const datauser = users[10];
+    cy.get('#firstname').clear().type(datauser.firstname);
+    cy.get('#lastname').clear().type(datauser.lastname);
+    cy.get('#email_address').clear().type(datauser.email);
+    cy.get('#password').clear().type('sanbercode');
+    cy.get('#password-confirmation').clear().type('sanbercode');  
   })
 })
 Cypress.Commands.add('autoFillCreateAccount', () => {
