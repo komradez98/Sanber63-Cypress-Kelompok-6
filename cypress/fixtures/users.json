@@ -230,51 +230,10 @@
     }
   },
   {
-    "firstname" :"Cypress", 
-    "lastname"  :"kel6",
-    "email"  :"cypresskel6@gmail.com",
+    "firstname" :"Bootcamp", 
+    "lastname"  :"Cypress",
+    "email"  :"cypresskelompok6@gmail.com",
     "password" :"Sanberkel6"
-  },
-  {
-    "firstname" :"Code",
-    "lastname"  :"kel6",
-    "email"  :"codesanber6@gmail.com",
-    "password" : "sanbercypress" 
-  },
-  {
-    "firstname" :"sanber",
-    "lastname"  :"kode",
-    "email"  :"codesanber6@gmail.com",
-<<<<<<< HEAD
-    "password" :"Sanbercode" 
-  },
-  {
-    "firstname" :"sanber",
-    "lastname"  :"kode",
-    "email"  :"codesanber6@gmail.com",
-    "password" :"Sanber6"  
-  },
-  {
-    "firstname" :"sanber",
-    "lastname"  :"kode",
-    "email"  :"codesanber6@gmail.com",
-    "password" :"Sanber6"
-  }
-  
-=======
-    "password" :"Sanbercode"
-  },
-  {
-      "firstname" :"sanber",
-      "lastname"  :"kode",
-      "email"  :"codesanber6@gmail.com",
-      "password" :"Sanber6"
-  },
-  {
-    "firstname" :"sanber",
-      "lastname"  :"kode",
-      "email"  :"codesanber6@gmail.com",
-      "password" :"Sanber6"
   },
   {
     "id" : 14,
@@ -282,4 +241,4 @@
     "password" : "Percobaan123"
   }
 ]
->>>>>>> 84a597b5f2d30db88ae411233e6c858f8f017420
+// >>>>>>> 84a597b5f2d30db88ae411233e6c858f8f017420 
