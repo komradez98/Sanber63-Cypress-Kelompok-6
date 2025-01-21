@@ -229,11 +229,17 @@
       "bs": "target end-to-end models"
     }
   },
-  {
+  { 
     "firstname" :"Bootcamp", 
     "lastname"  :"Cypress",
     "email"  :"cypresskelompok6@gmail.com",
     "password" :"Sanberkel6"
+  },
+  {
+    "firstname" :"Annisa", 
+    "lastname"  :"Fajri",
+    "email"  :"annisafajri40@gmail.com",
+    "password" :"cypres6"
   },
   {
     "id" : 14,

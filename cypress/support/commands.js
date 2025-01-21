@@ -120,7 +120,7 @@ Cypress.Commands.add('autoFillCreateAccount', () => {
 Cypress.Commands.add('failedCreateAccount1', () => {
   cy.visit('https://magento.softwaretestingboard.com/customer/account/create/');
   cy.fixture('users.json').then((users) => {
-    const datauser = users[10];
+    const datauser = users[11];
     cy.get('#firstname').clear().type(datauser.firstname);
     cy.get('#lastname').clear().type(datauser.lastname);
     cy.get('#email_address').clear().type(datauser.email);
@@ -128,25 +128,15 @@ Cypress.Commands.add('failedCreateAccount1', () => {
     cy.get('#password-confirmation').clear().type('sanbercode');  
   })
 })
-Cypress.Commands.add('autoFillCreateAccount', () => {
-  cy.visit('https://magento.softwaretestingboard.com/customer/account/create/')
-  cy.fixture('users.json').then ((users) => {
-    const datauser = users[12];
-    cy.fillCreateAccount(datauser.firstname, datauser.lastname, datauser.email, datauser.password)
-  })
-})
-Cypress.Commands.add('autoFillCreateAccount', () => {
-  cy.visit('https://magento.softwaretestingboard.com/customer/account/create/')
-  cy.fixture('users.json').then ((users) => {
-    const datauser = users[13];
-    cy.fillCreateAccount(datauser.firstname, datauser.lastname, datauser.email, datauser, password)
-  })
-})
-Cypress.Commands.add('autoFillCreateAccount', () => {
-  cy.visit('https://magento.softwaretestingboard.com/customer/account/create/')
-  cy.fixture('users.json').then ((users) => {
-    const datauser = users[14];
-    cy.fillCreateAccount(datauser.firstname, datauser.lastname, datauser.email, datauser.password)
+Cypress.Commands.add('failedCreateAccount2', () => {
+  cy.visit('https://magento.softwaretestingboard.com/customer/account/create/');
+  cy.fixture('users.json').then((users) => {
+    const datauser = users[11];
+    cy.get('#firstname').clear().type(datauser.firstname);
+    cy.get('#lastname').clear().type(datauser.lastname);
+    cy.get('#email_address').clear().type(datauser.email);
+    cy.get('#password').clear().type('Kelompokcypres');
+    cy.get('#password-confirmation').clear().type('Kelompokcypres'); 
   })
 })
 //Annisa End
